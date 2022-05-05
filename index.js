@@ -14,6 +14,10 @@ app.use(express.json())
 
 app.use('/', apiroute)
 
+// app.use(cors({
+//     origin: '*'
+// }))
+
 const url= "mongodb+srv://akhilesh:AKHILESH007@cluster0.ma5a9.mongodb.net/Kellton-Ecommerce?retryWrites=true&w=majority"
 mongoose.connect(url,{useNewUrlParser:true})
 .then( () =>{
