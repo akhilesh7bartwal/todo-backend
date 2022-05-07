@@ -6,14 +6,13 @@ const Controller = require('../controller/controller')
 router.get('/', Controller.showIndex)
 
 router.post('/add-todoitem', Controller.addTodoItem)
-//router.post('/add-todoitem', Controller.addTodoItem)
 
-// router.get('/get-products',cors(),Controller.showProducts)
+router.get('/get-todoitems',Controller.showTodoItems)
 
-// router.get('/get-product/:id',Controller.getCategoryItems)
+router.get('/get-todo/:id',Controller.getTodoItem)
 
-// router.put('/update-product/:id', Controller.updateCategory)
+router.put('/update-todo/:id', Controller.updateTodo)
 
-// router.delete('/delete-product/:id', Controller.deleteCategory)
+router.delete('/delete-todo/:id', Controller.deleteTodo)
 
 module.exports = router

@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 const apiroute= require('./routes/api_routes')
 
-const cors= require('cors')
+//const cors= require('cors')
 
 let app = express()
 
@@ -18,7 +18,7 @@ app.use('/', apiroute)
 //     origin: '*'
 // }))
 
-const url= "mongodb+srv://akhilesh:AKHILESH007@cluster0.ma5a9.mongodb.net/Kellton-Ecommerce?retryWrites=true&w=majority"
+const url= "mongodb+srv://akhilesh:AKHILESH007@cluster0.ma5a9.mongodb.net/Todo?retryWrites=true&w=majority"
 mongoose.connect(url,{useNewUrlParser:true})
 .then( () =>{
     console.log('Database Conected')
