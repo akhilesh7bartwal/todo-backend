@@ -1,13 +1,13 @@
 const express = require('express')
 const router = express.Router()
 const Controller = require('../controller/controller')
-//const cors = require('cors')
+const cors = require('cors')
 
 router.get('/', Controller.showIndex)
 
-router.post('/add-todoitem', Controller.addTodoItem)
+router.post('/add-todoitem',cors(), Controller.addTodoItem)
 
-router.get('/get-todoitems',Controller.showTodoItems)
+router.get('/get-todoitems',cors(),Controller.showTodoItems)
 
 router.get('/get-todo/:id',Controller.getTodoItem)
 
